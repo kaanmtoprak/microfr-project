@@ -1,0 +1,14 @@
+@use "./colors";
+
+@mixin flex($align-items: stretch, $justify-content: flex-start, $direction: row, $flex: flex, $wrap: nowrap) {
+    display: $flex;
+    align-items: $align-items;
+    justify-content: $justify-content;
+
+    @if $direction {
+        flex-direction: $direction;
+    }
+    @if $wrap {
+        flex-wrap: $wrap;
+    }
+}

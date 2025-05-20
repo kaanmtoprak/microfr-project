@@ -1,0 +1,16 @@
+@use "../../assets/styles/mixins" as *;
+@use "../../assets/styles/colors" as *;
+@use "../../assets/styles/typography" as *;
+
+.notFound {
+    @include flex(center, center, column);
+    height: calc(100vh - 120px);
+
+    .title {
+        @include font(48px, 700, $black);
+    }
+
+    .description {
+        @include font(24px, 400, $black);
+    }
+}

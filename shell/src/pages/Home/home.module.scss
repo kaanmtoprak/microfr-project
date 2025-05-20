@@ -1,0 +1,36 @@
+// src/components/Home.module.scss
+@use "../../assets/styles/screens.scss" as *;
+@use "../../assets/styles/colors.scss" as *;
+@use "../../assets/styles/typography.scss" as *;
+
+.home {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  .hero {
+    background: linear-gradient(135deg, $red-light,$blue-base, $green-base, $purple-base,$red-light);
+    color: $white;
+    text-align: center;
+    padding: 100px 20px;
+
+    @include respond-to(phone) {
+      padding: 50px 20px;
+    }
+    h1 {
+      @include font(32px, 500);
+      margin-bottom: 20px;
+
+      @include respond-to(phone) {
+        @include font(24px, 500);
+      }
+    }
+    p {
+      @include font(18px);
+      margin-bottom: 30px;
+
+      @include respond-to(phone) {
+        @include font(16px);
+      }
+    }
+  }
+}
