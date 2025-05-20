@@ -1,0 +1,38 @@
+@use "../../assets/styles/colors.scss" as *;
+
+.button {
+    width: 100%;
+    max-width: fit-content;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    &Dark {
+        background-color: $black;
+        color: $white;
+        &:hover {
+            background-color: $white;
+            color: $black;
+        }
+    }
+    &Light {
+        background-color: $white;
+        color: $black;
+        &:hover {
+            background-color: $black;
+            color: $white;
+        }
+    }
+    &Disabled {
+        background-color: $grey;
+        color: $white;
+        cursor: not-allowed;
+        &:hover {
+            background-color: $grey;
+            color: $white;
+        }
+    }
+}
+

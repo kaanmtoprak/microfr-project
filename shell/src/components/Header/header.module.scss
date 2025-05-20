@@ -1,0 +1,35 @@
+@use "../../assets/styles/mixins.scss" as *;
+@use "../../assets/styles/colors.scss" as *;
+@use "../../assets/styles/typography.scss" as *;
+
+.header {
+    background-color: $white;
+    color: $black;
+    padding: 10px 20px;
+    @include flex(center, space-between);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    min-height: 80px;
+
+    .logo {
+        @include font(24px, 900);
+        text-decoration: underline;
+        text-underline-offset: 4px;
+        cursor: pointer;
+        &:hover {
+            color: color-opacity($black, 50);
+        }
+    }
+
+    .menu {
+        &Item {
+            cursor: pointer;
+            + .menuItem {
+                margin-left: 20px;
+            }
+            &:hover {
+                color: color-opacity($black, 50);
+            }
+        }
+    }
+
+}

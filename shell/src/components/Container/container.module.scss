@@ -1,0 +1,17 @@
+@use '../../assets/styles/colors.scss' as *;
+@use '../../assets/styles/typography.scss' as *;
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    min-height: calc(100vh - 160px);
+    margin: 20px auto;
+    background-color: $white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    .title {
+        @include font(24px, 500);
+        margin-bottom: 20px;
+    }
+}

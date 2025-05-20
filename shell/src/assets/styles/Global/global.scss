@@ -1,0 +1,70 @@
+@use "../colors.scss" as *;
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: "NeueMontreal", sans-serif;
+    background: $white-light;
+    margin: 0;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    font-variant: normal;
+
+    * {
+        font-variant: normal;
+        font-variant-numeric: normal;
+        box-sizing: border-box;
+    }
+}
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $grey;
+    border-radius: 18px;
+    border: 6px solid transparent;
+    background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $grey;
+}
+
+#root {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+
+    @media screen and (max-width: 756px) {
+        background: $white-light;
+    }
+}
+
+figure,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
